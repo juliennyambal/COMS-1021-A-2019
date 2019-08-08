@@ -1,11 +1,13 @@
 #include<iostream>
 using namespace std;
 
-class Node
+/*class Node
 {
-    public:
+public:
 	int value;
 	Node* next;
+
+	Node() {};
 
 	Node(int val) {	
 		this->value = val;
@@ -15,20 +17,25 @@ class Node
 	//Some problem with this line
 	//Node(int val) : value(value), next(nullptr) {}
 };
-
-/*struct Node {
+*/
+struct Node {
 	int value;
 	Node * next;
-	Node(int v) : value(v), next(nullptr) {}
+
+	Node(int val) {
+		this->value = val;
+		next = nullptr;
+	}
+	//Node(int v) : value(v), next(nullptr) {}
 };
-*/
+
 class LinkedList {
     public:
 	Node* head;
 	LinkedList() {
 		head = nullptr;
 	}
-	//~LinkedList();
+	~LinkedList(){};
 	//LinkedList() : head(nullptr) {}
 };
 
@@ -95,7 +102,7 @@ It gives this
 
 //---------------------------------------------------------------------------------------------Insert in the middle---------------------------------------------------------------------------------
 
-    /*Now let's insert 10 that should come afte 9 */
+    /*Now let's insert 10 that should come after 9 */
 
 
 	// To print the list
